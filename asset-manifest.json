@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Zarodolgozat/static/css/main.4169f80c.css",
+    "main.js": "/Zarodolgozat/static/js/main.cc3c4c1b.js",
+    "index.html": "/Zarodolgozat/index.html",
+    "main.4169f80c.css.map": "/Zarodolgozat/static/css/main.4169f80c.css.map",
+    "main.cc3c4c1b.js.map": "/Zarodolgozat/static/js/main.cc3c4c1b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4169f80c.css",
+    "static/js/main.cc3c4c1b.js"
+  ]
+}
