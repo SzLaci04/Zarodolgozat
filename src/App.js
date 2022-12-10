@@ -8,11 +8,12 @@ import Navigation from './Layout/Navigation';
 import Informaciok from './Layout/Informaciok';
 
 function App() {
+
   return (
     <div>
       <Navigation/>
       <Routes>
-        <Route path="/" element={<Bemutatkozas/>}/>
+        <Route path="/Zarodolgozat" element={<Bemutatkozas/>}/>
         <Route path="/kepesrendeles" element={<Kepesrendeles/>}/>
         <Route path="/szovegesrendeles" element={<Szovegesrendeles/>}/>
       </Routes>

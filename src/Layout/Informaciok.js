@@ -8,7 +8,7 @@ function Informaciok()
                     <div className="col-md-12 col-lg-6 text-center">Elérhetőségek</div>
                 </div>
             </div>
-            <div class="footer-copyright text-center">© 2022 Copyright: Szabó László Zsolt</div>
+            <div className="footer-copyright text-center">© 2022 Copyright: Szabó László Zsolt</div>
         </footer>
     );
 }
