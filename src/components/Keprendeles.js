@@ -1,10 +1,8 @@
 import { useRef } from "react";
 
-function Keprendeles()
+function Keprendeles(props)
 {
     const kepInput=useRef();
-    const meretInput=useRef();
-
     const fileName=useRef();
     const kivalasztKezelo=event=>
     {
@@ -15,6 +13,7 @@ function Keprendeles()
             console.log(fajl);
         }
     };
+
     return(
         <div className="mx-5 mt-1">
             <form>
@@ -25,9 +24,18 @@ function Keprendeles()
                         <div className="row">
                             <div className="col-md-12 col-lg-6 form-group rounded bg-success">
                                 <h3>Méretek</h3>
-                                <select ref={meretInput} className="form-control bg-secondary text-white">
-                                    <option value="30x40cm">30x40cm</option>
-                                    <option value="40x40cm">40x40cm</option>
+                                <select className="form-control bg-secondary text-white">
+                                {
+                                    props.meretek.map(meret=>
+                                        {
+                                        console.log(meret);
+                                        return <option 
+                                            key={meret.meretId}
+                                            value={meret.meretId}>
+                                            {meret.meret}
+                                        </option>
+                                        })
+                                }
                                 </select>
                             </div>
                             <div className="col-md-12 col-lg-6 form-group rounded bg-success">

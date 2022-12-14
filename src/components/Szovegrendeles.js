@@ -1,33 +1,6 @@
-import { useRef } from "react";
-import { useState,useEffect } from "react";
 import classes from "./Szovegrendeles.module.css";
-function Szovegrendeles()
+function Szovegrendeles(props)
 {
-    const [toltodik,setToltodik]=useState(true);
-    let meretek=null;
-
-    useEffect(()=>{
-        setToltodik(true);
-        fetch('Zarodolgozat/zarodolgozat/php/adatbazis.php/meretek')
-        .then(eredmeny=>{return eredmeny.json();})
-        .then(data=>{
-            const sizes=[];
-            for(const key of data)
-            {
-                sizes.push(key);
-            }
-          setToltodik(false);
-          console.log(sizes);
-          console.log(data);
-          meretek=data;
-          console.log(meretek);
-        });    
-      },[]);
-
-    if(toltodik)
-    {
-        return <section><p>Loading...</p></section>
-    }
     return(
         <div className="mx-5 mt-1">
         <form>
@@ -40,9 +13,15 @@ function Szovegrendeles()
                             <h3>Méretek</h3>
                             <select className="form-control bg-secondary text-white">
                                 {
-                                    meretek.map(meret=>{
-                                        <option key={meret.meretID} value={meret.meretID}>{meret.meret}</option>
-                                    })
+                                    props.meretek.map(meret=>
+                                        {
+                                        console.log(meret);
+                                        return <option 
+                                            key={meret.meretId}
+                                            value={meret.meretId}>
+                                            {meret.meret}
+                                        </option>
+                                        })
                                 }
                             </select>
                         </div>
