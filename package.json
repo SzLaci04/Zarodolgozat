@@ -2,7 +2,7 @@
   "proxy": "http://localhost:80",
   "name": "zarodolgozat",
   "version": "0.1.0",
-  "homepage": "https://szlaci04.github.io/Zarodolgozat",
+  "homepage": "https://szlaci04.github.io/Bemutatkozas",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
